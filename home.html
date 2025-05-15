@@ -1,0 +1,1153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home</title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+
+    <style>
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap");
+* {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  text-transform: capitalize;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+html::-webkit-scrollbar {
+  width: 1rem;
+}
+
+html::-webkit-scrollbar-track {
+  background: #0d0d0d;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: crimson;
+}
+
+body {
+  background: #0d0d0d;
+  padding-bottom: 6.5rem;
+}
+
+section {
+  padding: 5rem 2rem;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.heading {
+  text-align: center;
+  font-size: 6vw;
+  color: #fff;
+  margin-bottom: 3rem;
+  text-transform: uppercase;
+}
+
+.heading span {
+  text-transform: uppercase;
+  color: crimson;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  border-radius: 5rem;
+  background: crimson;
+  padding: .7rem;
+  font-size: 1.7rem;
+  color: #fff;
+  padding-left: 2rem;
+}
+
+.btn i {
+  height: 4rem;
+  width: 4rem;
+  line-height: 4rem;
+  font-size: 1.7rem;
+  text-align: center;
+  background: #fff;
+  color: crimson;
+  border-radius: 50%;
+  margin-left: 1rem;
+  -webkit-transition: .2s linear;
+  transition: .2s linear;
+}
+
+.btn:hover i {
+  margin-left: 2rem;
+}
+
+.navbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  z-index: 1000;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.navbar a {
+  padding: 2rem;
+  font-size: 2rem;
+  background: #1a1a1a;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  color: #fff;
+  text-align: center;
+  -webkit-transition: .2s linear;
+  transition: .2s linear;
+}
+
+.navbar a i {
+  color: crimson;
+  padding-right: .5rem;
+}
+
+.navbar a:hover {
+  background: crimson;
+  padding-bottom: 6rem;
+}
+
+.navbar a:hover i {
+  color: #fff;
+}
+
+.home {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 4rem;
+  min-height: calc(100vh - 6.5rem);
+}
+
+.home .image {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 42rem;
+          flex: 1 1 42rem;
+  text-align: center;
+}
+
+.home .image img {
+  height: 50rem;
+  width: 50rem;
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+}
+
+.home .content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 42rem;
+          flex: 1 1 42rem;
+}
+
+.home .content h3 {
+  color: #fff;
+  font-size: 4rem;
+  padding-bottom: .5rem;
+}
+
+.home .content span {
+  font-size: 3rem;
+  color: crimson;
+  padding: .5rem 0;
+  display: block;
+}
+
+.home .content p {
+  font-size: 1.5rem;
+  color: #aaa;
+  padding: 1rem 0;
+  line-height: 2;
+}
+
+.about .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.about .row .info-container {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 42rem;
+          flex: 1 1 42rem;
+}
+
+.about .row .info-container h1 {
+  font-size: 3rem;
+  color: #fff;
+  text-transform: uppercase;
+  padding-bottom: 1rem;
+}
+
+.about .row .info-container .box-container {
+  padding: 1rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.about .row .info-container .box-container .box {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 20rem;
+          flex: 1 1 20rem;
+}
+
+.about .row .info-container .box-container .box h3 {
+  font-size: 1.7rem;
+  color: #fff;
+  padding: 1rem 0;
+  font-weight: normal;
+}
+
+.about .row .info-container .box-container .box h3 span {
+  color: #aaa;
+  font-weight: lighter;
+}
+
+.about .row .count-container {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 42rem;
+          flex: 1 1 42rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.about .row .count-container .box {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 20rem;
+          flex: 1 1 20rem;
+  padding: 3rem 4rem;
+  border-radius: .5rem;
+  background: #1a1a1a;
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.7);
+          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.7);
+}
+
+.about .row .count-container .box h3 {
+  font-size: 5rem;
+  color: crimson;
+}
+
+.about .row .count-container .box p {
+  font-size: 2rem;
+  color: #aaa;
+}
+
+.skills .box-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(16rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  gap: 1.5rem;
+}
+
+.skills .box-container .box {
+  padding: 2rem;
+  text-align: center;
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.7);
+          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.7);
+  border-radius: .5rem;
+  background: #1a1a1a;
+}
+
+.skills .box-container .box:hover {
+  background: #fff;
+}
+
+.skills .box-container .box:hover h3 {
+  color: #0d0d0d;
+}
+
+.skills .box-container .box img {
+  height: 7rem;
+  margin-bottom: 1rem;
+}
+
+.skills .box-container .box h3 {
+  color: #fff;
+  font-size: 1.7rem;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+.education .box-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.education .box-container .box {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 40rem;
+          flex: 1 1 40rem;
+  margin-left: 2rem;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 3.5rem;
+  padding-bottom: 3rem;
+  border-left: 0.1rem solid #aaa;
+  position: relative;
+}
+
+.education .box-container .box i {
+  height: 4.5rem;
+  width: 4.5rem;
+  line-height: 4.5rem;
+  font-size: 1.7rem;
+  border-radius: 50%;
+  background: crimson;
+  color: #fff;
+  text-align: center;
+  position: absolute;
+  top: -1rem;
+  left: -2.5rem;
+}
+
+.education .box-container .box span {
+  font-size: 1.7rem;
+  color: #fff;
+  border-radius: 5rem;
+  padding: .5rem 1.5rem;
+  background: #1a1a1a;
+}
+
+.education .box-container .box h3 {
+  font-size: 2rem;
+  padding: 1rem 0;
+  color: #fff;
+  padding-top: 3rem;
+  font-weight: normal;
+}
+
+.education .box-container .box p {
+  font-size: 1.5rem;
+  color: #aaa;
+  line-height: 2;
+}
+
+.portfolio {
+  text-align: center;
+}
+
+.portfolio .box-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(31rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(31rem, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.portfolio .box-container .box {
+  height: 30rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.portfolio .box-container .box:hover .content {
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
+}
+
+.portfolio .box-container .box img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.portfolio .box-container .box .content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #1a1a1a;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 2rem;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  -webkit-transition: .2s linear;
+  transition: .2s linear;
+}
+
+.portfolio .box-container .box .content h3 {
+  font-size: 2.5rem;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+
+.portfolio .box-container .box .content p {
+  padding: 1rem 0;
+  font-size: 1.5rem;
+  line-height: 2;
+  color: #aaa;
+}
+
+.portfolio .box-container .box .content a {
+  font-size: 2rem;
+  color: crimson;
+}
+
+.portfolio .box-container .box .content a:hover {
+  color: #fff;
+}
+
+.blogs .box-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(31rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(31rem, 1fr));
+  gap: 1.5rem;
+}
+
+.blogs .box-container .box {
+  text-align: center;
+  padding: 2rem;
+  border-radius: .5rem;
+  background: #1a1a1a;
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.7);
+          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.7);
+}
+
+.blogs .box-container .box:hover .image img {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.blogs .box-container .box .image {
+  height: 25rem;
+  width: 100%;
+  border-radius: .5rem;
+  overflow: hidden;
+}
+
+.blogs .box-container .box .image img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: .2s linear;
+  transition: .2s linear;
+}
+
+.blogs .box-container .box .content .icons {
+  position: relative;
+  top: -1rem;
+  border-radius: .5rem;
+  padding: 1.5rem;
+  display: inline-block;
+  background: #0d0d0d;
+}
+
+.blogs .box-container .box .content .icons a {
+  font-size: 1.4rem;
+  margin: 0 1rem;
+  color: #fff;
+}
+
+.blogs .box-container .box .content .icons a:hover {
+  color: crimson;
+}
+
+.blogs .box-container .box .content .icons a i {
+  padding-right: .5rem;
+  color: crimson;
+}
+
+.blogs .box-container .box .content h3 {
+  font-size: 2rem;
+  color: #fff;
+  font-weight: normal;
+}
+
+.blogs .box-container .box .content p {
+  font-size: 1.5rem;
+  color: #aaa;
+  padding: 1rem 0;
+  line-height: 2;
+}
+
+.contact .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.contact .row .info-container {
+  width: 40rem;
+}
+
+.contact .row .info-container h1 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  color: #fff;
+  padding-bottom: 1rem;
+}
+
+.contact .row .info-container p {
+  font-size: 1.5rem;
+  line-height: 2;
+  color: #aaa;
+  padding: 1rem 0;
+}
+
+.contact .row .info-container .box-container {
+  padding: 2rem 0;
+}
+
+.contact .row .info-container .box-container .box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2rem;
+  padding: 1rem 0;
+}
+
+.contact .row .info-container .box-container .box i {
+  font-size: 3rem;
+  color: crimson;
+}
+
+.contact .row .info-container .box-container .box h3 {
+  font-size: 2rem;
+  color: #fff;
+}
+
+.contact .row .info-container .share a {
+  font-size: 2rem;
+  height: 4.5rem;
+  width: 4.5rem;
+  line-height: 4.5rem;
+  border-radius: 50%;
+  background: #1a1a1a;
+  color: #fff;
+  text-align: center;
+  margin-right: .3rem;
+}
+
+.contact .row .info-container .share a:hover {
+  background: crimson;
+}
+
+.contact .row form {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 42rem;
+          flex: 1 1 42rem;
+}
+
+.contact .row form .inputBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.contact .row form .inputBox input {
+  width: 49%;
+}
+
+.contact .row form .inputBox input,
+.contact .row form textarea {
+  border-radius: 5rem;
+  padding: 1.2rem 1.8rem;
+  font-size: 1.6rem;
+  color: #fff;
+  text-transform: none;
+  margin: .7rem 0;
+  background: #1a1a1a;
+}
+
+.contact .row form textarea {
+  width: 100%;
+  border-radius: 1rem;
+  resize: none;
+  height: 25rem;
+}
+
+.contact .row form .btn {
+  padding: 1rem 3rem;
+  cursor: pointer;
+}
+
+.contact .row form .btn:hover {
+  background: #fff;
+  color: #0d0d0d;
+}
+
+@media (max-width: 1200px) {
+  html {
+    font-size: 55%;
+  }
+  section {
+    padding: 3rem 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .heading {
+    font-size: 12vw;
+  }
+  .navbar a i {
+    padding: 0;
+  }
+  .navbar a span {
+    display: none;
+  }
+  .navbar a:hover {
+    padding-bottom: 2rem;
+  }
+  .home {
+    text-align: center;
+    gap: 2rem;
+  }
+  .home .image img {
+    height: 30rem;
+    width: 30rem;
+  }
+  .home .content h3 {
+    font-size: 3rem;
+  }
+  .home .content span {
+    font-size: 2.5rem;
+  }
+  .contact .row form .inputBox input {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+}
+/*# sourceMappingURL=style.css.map */
+
+
+
+    </style>
+
+</head>
+<body>
+    
+<!-- navbar section starts  -->
+
+
+<!-- navbar section ends -->
+
+<!-- home section starts  -->
+
+<section class="home">
+
+    <div class="image">
+        <img src="images/mypic5.jpg" alt="">
+    </div>
+
+    <div class="content">
+        <h3>Ciao, i am Christina V</h3>
+        <span>Photographer, Web designer</span>
+        <p>Hi, I’m Christina V.,a photographer & website designer passionate about capturing the perfect shoots, Designing a portfolio pages website, business website life running, moments capturing, telling stories. I specialize in product, people, business, action and events, special days capturing photographhy, website realization and you products introduction.
+,you nishe portfolio building, emotions of you important life day or any ather business niche. My goals is to create high-quality imagery portfolio that resonates with audience and delivering high-quality visuals that bring brands and memories to life.
+
+            </p>
+        <!-- <a href="#" class="btn"> about me <i class="fas fa-user"></i> </a> -->
+    </div>
+
+<!-- home section ends -->
+
+<!-- story  -->
+
+<section class="skills">
+
+    <h1 class="heading"> <span></span> </h1>
+    <div class="content">
+        <h3></h3>
+        <span>Background & Experience</span>
+        <p>
+I started my journey in photography and web design as a tenager, experimenting with landscapes befre falling in love with the challenge of capturing tourists, products, events, important life days, restaurants, businesses. Over the past five years, I’ve worked with local businesses, designers, couples. Helping them showcase their best moments. Whether shooting in controlled studio setting or high-energy autdoor environments, I thrive on adapting to different lighting, motion, and composition needs. 
+
+
+            </p>
+    </div>
+    
+
+</section>
+
+<!-- story -->
+
+
+<!-- about section starts  -->
+
+<section class="about">
+
+    <div class="row">
+
+        <div class="info-container">
+
+            <h1>personal info</h1>
+
+            <div class="box-container">
+
+                <div class="box">
+                    <h3> <span>name : </span> Christina V </h3>
+                    <h3> <span>age : </span> 24 </h3>
+                    <h3> <span>email : </span> 102792uk@saeinstitute.edu </h3>
+                    <h3> <span>address : </span> London, United Kingdom </h3>
+                    <h3> <span>phone : </span> +447361188508 </h3>
+                </div>
+    
+                <div class="box">
+                    <h3> <span>freelance : </span> available </h3>
+                    <h3> <span>skill : </span> Photographer, Web designer </h3>
+                    <h3> <span>experience : </span> 2 years </h3>
+                    <h3> <span>language : </span> english, russian, latvian </h3>
+                </div>
+
+            </div>
+
+
+
+            <a href="CV from Kristina (2).pdf" download class="btn btn--download">Download <span class="u-bolder"></span>myCV<i class="fas fa-download"></i></a>
+           
+
+        </div>
+
+        <div class="count-container">
+
+            <div class="box">
+                <h3>2+</h3>
+                <p>years of experience</p>
+            </div>
+
+            <div class="box">
+                <h3>100+</h3>
+                <p>happy clients</p>
+            </div>
+
+            <div class="box">
+                <h3>205+</h3>
+                <p>project completed</p>
+            </div>
+
+            <div class="box">
+                <h3>10+</h3>
+                <p>awards won</p>
+            </div>
+
+        </div>
+
+    </div>
+    </div>
+
+<br><br><br>
+
+<!-- about section ends -->
+
+
+<!-- skills section starts  -->
+
+<section class="skills">
+
+    <h1 class="heading"> <span></span></h1>
+<div class="content">
+        <h3>Skills & Specialties</h3>
+        <span>Portfolio Building Shooting</span>
+        <p>Capturing The clear introduction about you, with details, and business activity.</p>
+         <span>Product Photography</span>
+        <p>Clean, professional shots for brands & e-commerce.</p>
+        <span>Action Photography</span>
+        <p>Freezing motion in events days & outdoor adventure.</p>
+    
+
+</section>
+
+<!-- skills section ends -->
+
+<!-- portfolio section starts  -->
+
+<section class="portfolio">
+
+
+    <h1 class="heading"> <span>SAE INSTITUTE LONDON</span>WORK</h1>
+    <br>
+
+    <div class="box-container">
+
+        <div class="box">
+            <img src="images/welcometomy.png" alt="">
+            <div class="content">
+                <h3>Myltimodal Brand Store</h3>
+                <p>I'm building a modern platform. It’s a platform with innovation, and purpose a legend where both sellers and buyers share a role in the unfolding story. I'm invite you to be part of this project story.
+</p>
+                <a href="https://drive.google.com/file/d/1s6pDg1-8d3pKvBcpFDvmv9IF15lP5Bv0/view?usp=sharing">CLICK TO  READ MORE</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="images/blackbritish.png" alt="">
+            <div class="content">
+                <h3>Black British UK</h3>
+                <p>The project was created, from the collaboration process with cinematograph course students, I drew the website design by myself and created the code to explore unique design.</p>
+                <a href="https://drive.google.com/file/d/1OmiA8N2gWGxqJjSo19dbQu5HJZXIStAW/view?usp=sharing">CLICK TO  READ MORE</a>
+            </div>
+        </div>
+       
+        <div class="box">
+            <img src="images/gamedevelopment.png" alt="">
+            <div class="content">
+                <h3>MOBILE GAME DEVELOPMENT</h3>
+                <p>The task of our group was to create a game on the Android studio platform, working together with Java language we were able to analyze a lot of details and develop our application step by step.</p>
+                <a href="https://drive.google.com/file/d/1AHMzn-45yIvl6j3gwby6tZaVMOBj43EL/view?usp=sharing">CLICK TO READ MORE</a>
+            </div>
+        </div>
+
+       
+    
+</section>
+
+<section class="portfolio">
+
+
+    <h1 class="heading"> <span>PORTFOLIO</span>PAGES</h1>
+    <br>
+
+    <div class="box-container">
+
+        <div class="box">
+            <img src="images/portfolio.png" alt="">
+            <div class="content">
+                <h3>Make people know about you</h3>
+                <p>I can build you own website that will suit you, figure out the design together and launch your website into life.
+</p>
+                <a href="https://www.instagram.com/christina_kastro?igsh=MWthNnBzNDlseW9kZw==">CLICK TO CONTACT ME</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="images/portfolio2.png" alt="">
+            <div class="content">
+                <h3>From any city we can work online on it, to make your portiolio special</h3>
+                <p></p>
+                <a href="https://www.instagram.com/christina_kastro?igsh=MWthNnBzNDlseW9kZw==">CLICK TO CONTACT ME</a>
+            </div>
+        </div>
+       
+        <div class="box">
+            <img src="images/portfolio3.png" alt="">
+            <div class="content">
+                <h3>Quality pictures</h3>
+                <p>I will be glad to work on the quality of you portfolio gallery</p>
+               <a href="https://www.instagram.com/christina_kastro?igsh=MWthNnBzNDlseW9kZw==">CLICK TO CONTACT ME</a>
+            </div>
+        </div>
+
+
+       </section>
+
+
+       <section class="portfolio">
+
+
+    <h1 class="heading"> <span>LONDON</span>SHOOTING</h1>
+    <br>
+
+    <div class="box-container">
+
+        <div class="box">
+            <img src="shooting/WhatsApp Image 2025-05-13 at 02.26.43.jpeg" alt="">
+        </div>
+       
+        <div class="box">
+            <img src="shooting/WhatsApp Image 2025-05-13 at 02.26.07.jpeg" alt="">
+            </div>
+        </div>
+
+          <div class="box">
+            <img src="shooting/WhatsApp Image 2025-05-13 at 02.26.02.jpeg" alt="">
+           
+            </div>
+        </div>
+
+       
+    
+</section>
+
+        <section class="portfolio">
+
+
+    <h1 class="heading"> <span>BUSINESS</span>PROMOTION</h1>
+    <br>
+
+    <div class="box-container">
+
+        <div class="box">
+            <img src="images/business3.png" alt="">
+            <div class="content">
+                <h3>Show the essence of your work process with good shoots</h3>
+                <p>
+</p>
+             
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="images/business2.png" alt="">
+            <div class="content">
+                <h3>Way to develop business with good photos that will reflect all your work</h3>
+                <p></p>
+                
+            </div>
+        </div>
+       
+        <div class="box">
+            <img src="images/business1.png" alt="">
+            <div class="content">
+                <h3>High-quality pictures, well-chosen shoots are the key to increasing sales</h3>
+                <p></p>
+               
+            </div>
+        </div>
+
+    
+</section>
+
+
+
+<!-- portfolio section ends -->
+
+
+
+
+
+<!-- education section starts  -->
+
+<section class="education">
+
+    <h1 class="heading"> <span>my</span> education </h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <i class="fas fa-graduation-cap"></i>
+            <span>2024 - 2025 London</span>
+            <h3>PHP & MySQL course</h3>
+            <p></p>
+        </div>
+
+         <div class="box">
+            <i class="fas fa-graduation-cap"></i>
+            <span>2024 - 2025 London Institute of Photography</span>
+            <h3>Photographer courses</h3>
+            <p></p>
+        </div>
+
+        <div class="box">
+            <i class="fas fa-graduation-cap"></i>
+            <span>2022 - 2025 SAE Institute, London</span>
+            <h3>Front-End & Back-End Development BA/BSc (Hons) Web Development Degree</h3>
+            <p></p>
+        </div>
+
+        <div class="box">
+            <i class="fas fa-graduation-cap"></i>
+            <span>2017 - 2022</span>
+            <h3>Marketing & Logistic College Latvia, Dugavpils</h3>
+            <p></p>
+        </div>
+
+        <div class="box">
+            <i class="fas fa-graduation-cap"></i>
+            <span>2007 - 2016</span>
+            <h3>Vienibas Secondary School Latvia, Daugavpils</h3>
+            <p></p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- contact section starts  -->
+
+<section class="contact">
+
+<h1 class="heading"> contact <span>me</span> </h1>
+
+<div class="row">
+
+    <div class="info-container">
+
+        <h1>get in touch to work on you project together</h1>
+
+        <p>📸 Portfolio Shoot Pricing Guide
+
+Around: $150 – $250
+
+Includes:
+
+1-hour photo shoot
+
+1 location (indoor or outdoor)
+
+2 outfit changes
+
+10 edited photos
+
+Online gallery delivery</p>
+
+        <div class="box-container">
+
+            <div class="box">
+                <i class="fas fa-map"></i>
+                <div class="info">
+                    <h3>address :</h3>
+                    <p>London, United Kingdom</p>
+                </div>
+            </div>
+
+            <div class="box">
+                <i class="fas fa-envelope"></i>
+                <div class="info">
+                    <h3>email :</h3>
+                    <p>102792uk@saeinstitute.edu</p>
+                </div>
+            </div>
+
+            <div class="box">
+                <i class="fas fa-phone"></i>
+                <div class="info">
+                    <h3>number :</h3>
+                    <p>+447361188508</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="share">
+            <a href="https://wa.me/qr/XGEDROIJ4DV5G1" class="fab fa-whatsapp"></a>
+            <a href="https://www.instagram.com/christina_kastro?igsh=MWthNnBzNDlseW9kZw==" class="fab fa-instagram"></a>
+            <a href="https://www.linkedin.com/in/kristina-vasiljeva-29310a2a3?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" class="fab fa-linkedin"></a>
+        </div>
+
+    </div>
+  <form onsubmit="emailSend(); reset(); return falce;">
+
+        <div class="inputBox">
+            <input type="text" placeholder="your name">
+            <input type="number" placeholder="your number">
+        </div>
+
+        <div class="inputBox">
+            <input type="email" placeholder="your email">
+        </div>
+
+        <textarea name="" placeholder="...I'm quick reply on Instagram or WhatsApp" id="" cols="30" rows="10"></textarea>
+
+        <input type="submit" value="send message" class="btn">
+
+    </form>
+
+
+</div>
+
+</section>
+
+<!-- contact section ends -->
+
+<!-- education section ends -->
+
+
+
+<script src="https://smtpjs.com/v3/smtp.js">
+</script>
+<script src="Contact form to email.js">
+</script>
+<script>
+
+    function emailSend(){
+        Email.send({
+    Host : "s1.maildns.net",
+    Username : "username",
+    Password : "password",
+    To : 'them@website.com',
+    From : "you@isp.com",
+    Subject : "This is the subject",
+    Body : "And this is the body"
+}).then(
+  message => alert(message)
+);
+    }
+
+
+
+</script>
+
+</body>
+</html>
